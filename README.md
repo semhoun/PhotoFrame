@@ -7,7 +7,7 @@ Simple bash script to make a digital photo frame with QIV.
 Clone the repository on the Raspberry Pi (or any system Linux based) :
 
 ```bash
-git clone git@github.com:HitoTech/photoframe.git
+git clone git@github.com:semhoun/photoframe.git
 cd photoframe
 ```
 
@@ -16,7 +16,7 @@ Execute the system setup script.
 :warning: This script will remove and clean Linux packages unused for this project.
 
 ```bash
-sudo ./system_init.sh
+./system_init.sh
 ```
 
 When the script is done, you should have QIV installed, an autoloading slideshow at system boot, and a new folder `~/pics`. Add photos in this folder, and they will be added to slideshow.

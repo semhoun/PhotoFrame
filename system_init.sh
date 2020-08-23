@@ -3,8 +3,8 @@
 set -x
 
 # remove unused software
-apt-get update && \
-apt-get purge -q -y wolfram-engine \
+sudo apt-get update && \
+sudo apt-get purge -q -y wolfram-engine \
 	libreoffice* \
 	minecraft-pi \
 	sonic-pi \
@@ -13,17 +13,18 @@ apt-get purge -q -y wolfram-engine \
 	scratch* nuscratch \
 	python3-pygame python-pygame \
 	greenfoot && \
-apt-get clean -y && \
-apt-get autoremove -y && \
+sudo apt-get clean -y && \
+sudo apt-get autoremove -y && \
 
 # update system
-apt-get upgrade -y && \
-apt-get dist-upgrade -y && \
+sudo apt-get upgrade -y && \
+sudo apt-get dist-upgrade -y && \
 
-apt-get install -y qiv && \
+sudo apt-get install -y qiv && \
 
 # create the directory which will contains the pictures
 mkdir -p /home/pi/pics && \
 
 # config used to autostart the slideshow at Raspbian boot
+mkdir -p /home/pi/.config/autostart
 cp ./config_files/slideshow.desktop /home/pi/.config/autostart/slideshow.desktop
